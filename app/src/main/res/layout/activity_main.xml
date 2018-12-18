@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_below="@id/my_toolbar"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/currentTemperature"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/currentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    tools:text="seg, 28 jun" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/currentTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/textColor"
+                android:textSize="130sp"
+                tools:text="21°" />
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:columnCount="4"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:rowCount="3">
+
+                <TextView
+                    android:id="@+id/minTextView"
+                    style="@style/BaseTextView"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="1"
+                    android:text="@string/min" />
+
+                <TextView
+                    android:id="@+id/maxTextView"
+                    style="@style/BaseTextView"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:text="@string/max"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mornigTextView"
+                    style="@style/BaseTextView"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="0"
+                    android:text="@string/morning" />
+
+                <TextView
+                    android:id="@+id/morningMin"
+                    style="@style/BaseTextView"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    tools:text="12º" />
+
+                <TextView
+                    android:id="@+id/morningMax"
+                    style="@style/BaseTextView"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:textStyle="bold"
+                    tools:text="22º" />
+
+                <TextView
+                    android:id="@+id/afternoonTextView"
+                    style="@style/BaseTextView"
+                    android:layout_column="2"
+                    android:layout_row="0"
+                    android:text="@string/afternoon" />
+
+                <TextView
+                    android:id="@+id/afternoonMin"
+                    style="@style/BaseTextView"
+                    android:layout_column="2"
+                    android:layout_row="1"
+                    tools:text="12º" />
+
+                <TextView
+                    android:id="@+id/afternoonMax"
+                    style="@style/BaseTextView"
+                    android:layout_column="2"
+                    android:layout_row="2"
+                    android:textStyle="bold"
+                    tools:text="22º" />
+
+                <TextView
+                    android:id="@+id/nightTextView"
+                    style="@style/BaseTextView"
+                    android:layout_column="3"
+                    android:layout_row="0"
+                    android:text="@string/night" />
+
+                <TextView
+                    android:id="@+id/nightMin"
+                    style="@style/BaseTextView"
+                    android:layout_column="3"
+                    android:layout_row="1"
+                    tools:text="12º" />
+
+                <TextView
+                    android:id="@+id/nightMax"
+                    style="@style/BaseTextView"
+                    android:layout_column="3"
+                    android:layout_row="2"
+                    android:textStyle="bold"
+                    tools:text="22º" />
+            </GridLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="0dp"></ListView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+</RelativeLayout>

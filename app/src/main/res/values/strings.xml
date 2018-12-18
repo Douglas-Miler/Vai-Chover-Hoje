@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vai chover hoje?</string>
+    <string name="morning">manhã</string>
+    <string name="afternoon">tarde</string>
+    <string name="night">noite</string>
+    <string name="min">min</string>
+    <string name="max">máx</string>
+</resources>
