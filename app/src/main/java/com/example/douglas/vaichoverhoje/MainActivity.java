@@ -30,8 +30,8 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String SEVEN_DAYS_WEATHER_CONDITION = "http://apiadvisor.climatempo.com.br/api/v1/forecast/locale/3477/days/15?token=fe15f8e3da1752649e88fe308c324550";
-    private static final String CURRENT_WEATHER_CONDITION = "http://apiadvisor.climatempo.com.br/api/v1/weather/locale/3477/current?token=fe15f8e3da1752649e88fe308c324550";
+    private static final String SEVEN_DAYS_WEATHER_CONDITION = "https://apiadvisor.climatempo.com.br/api/v1/forecast/locale/3477/days/15?token=fe15f8e3da1752649e88fe308c324550";
+    private static final String CURRENT_WEATHER_CONDITION = "https://apiadvisor.climatempo.com.br/api/v1/weather/locale/3477/current?token=fe15f8e3da1752649e88fe308c324550";
     private static final String LOG_TAG = MainActivity.class.getName();
     private static final SimpleDateFormat FORMAT_INPUT = new SimpleDateFormat("yyyy-MM-dd");
     private static final SimpleDateFormat FORMAT_OUTPUT = new SimpleDateFormat("EEE, d MMM");
